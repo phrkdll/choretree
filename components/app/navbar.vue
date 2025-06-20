@@ -6,9 +6,7 @@
 			</a>
 		</div>
 		<div class="navbar-end">
-			<button class="btn btn-square btn-ghost flex items-center">
-				<Icon name="mynaui:dots" size="24" />
-			</button>
+			<AppThemeSwitcher />
 		</div>
 	</div>
 </template>
