@@ -3,11 +3,13 @@ import { z } from "zod"
 
 export const EnvSchema = z.object({
 	NODE_ENV: z.string(),
+	TURSO_DB_URL: z.string(),
+	TURSO_AUTH_TOKEN: z.string().optional(),
 })
 
 export type Env = z.infer<typeof EnvSchema>
 
-function validateEnv(): Env | undefined {
+function validateEnv(): Env {
 	const env = EnvSchema.safeParse(process.env)
 
 	if (env.success) {
