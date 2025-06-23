@@ -12,6 +12,7 @@ export default withNuxt(antfu({
 	vue: true,
 	typescript: true,
 	formatters: true,
+	ignores: ["**/migrations/*"],
 }, {
 	rules: {
 		"perfectionist/sort-imports": ["error", {

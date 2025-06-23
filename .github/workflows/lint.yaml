@@ -9,6 +9,14 @@ jobs:
   lint:
     name: Lint
     runs-on: ubuntu-latest
+    env:
+      TURSO_DB_URL: .
+      BETTER_AUTH_URL: .
+      BETTER_AUTH_SECRET: .
+      GITHUB_CLIENT_ID: .
+      GITHUB_CLIENT_SECRET: .
+      DISCORD_CLIENT_ID: .
+      DISCORD_CLIENT_SECRET: .
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
