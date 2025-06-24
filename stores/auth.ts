@@ -12,7 +12,13 @@ export const useAuthStore = defineStore("useAuthStore", () => {
 	}
 
 	async function logout() {
-		await authClient.signOut()
+		await authClient.signOut({
+			fetchOptions: {
+				onSuccess: () => {
+					navigateTo("/")
+				},
+			},
+		})
 	}
 
 	function useSession() {
