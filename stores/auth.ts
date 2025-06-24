@@ -7,7 +7,7 @@ export const useAuthStore = defineStore("useAuthStore", () => {
 	async function login(provider: "github" | "discord") {
 		await authClient.signIn.social({
 			provider,
-			callbackURL: "/dashboard",
+			callbackURL: "/tasks",
 		})
 	}
 
