@@ -12,14 +12,10 @@ const isDark = computed({
 </script>
 
 <template>
-	<label class="swap swap-rotate mx-2">
-		<!-- this hidden checkbox controls the state -->
+	<label class="btn btn-ghost btn-circle swap swap-rotate">
 		<input v-model="isDark" type="checkbox">
 
-		<!-- sun icon -->
 		<Icon class="swap-on" name="tabler:sun" size="24" />
-
-		<!-- moon icon -->
 		<Icon class="swap-off" name="tabler:moon" size="24" />
 	</label>
 </template>
