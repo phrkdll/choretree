@@ -1,4 +1,4 @@
-# Nuxt dev/build outputs
+# nuxt dev/build outputs
 .output
 .data
 .nuxt
@@ -6,19 +6,22 @@
 .cache
 dist
 
-# Node dependencies
+# node dependencies
 node_modules
 
-# Logs
+# logs
 logs
 *.log
 
-# Misc
+# misc
 .DS_Store
 .fleet
 .idea
 
-# Local env files
+# local env files
 .env
 .env.*
 !.env.example
+
+# turso
+local.db*

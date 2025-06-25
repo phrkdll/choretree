@@ -5,22 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1750677156460,
-      "tag": "0000_cynical_exiles",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1750678402605,
-      "tag": "0001_rare_white_queen",
-      "breakpoints": true
-    },
-    {
-      "idx": 2,
-      "version": "6",
-      "when": 1750762501496,
-      "tag": "0002_sharp_rhodey",
+      "when": 1750845942515,
+      "tag": "0000_old_ikaris",
       "breakpoints": true
     }
   ]
