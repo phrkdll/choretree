@@ -10,6 +10,11 @@ const session = authStore.useSession()
 				<Icon name="tabler:home" size="24" />choretree
 			</NuxtLink>
 		</div>
+		<div class="navbar-center">
+			<NuxtLink v-if="session.data" to="/tasks/create" class="btn btn-primary">
+				<Icon name="tabler:plus" size="24" />
+			</NuxtLink>
+		</div>
 		<div class="navbar-end gap-2">
 			<AppThemeSwitcher />
 			<div v-if="session.data" class="dropdown dropdown-end">

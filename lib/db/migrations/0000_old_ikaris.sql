@@ -28,6 +28,24 @@ CREATE TABLE `sessions` (
 );
 --> statement-breakpoint
 CREATE UNIQUE INDEX `sessions_token_unique` ON `sessions` (`token`);--> statement-breakpoint
+CREATE TABLE `tasks` (
+	`id` text PRIMARY KEY NOT NULL,
+	`title` text NOT NULL,
+	`created_at` integer NOT NULL,
+	`created_by` text NOT NULL,
+	`updated_at` integer NOT NULL,
+	`updated_by` text NOT NULL,
+	`parent_id` text,
+	`deadline` integer,
+	`assigned_to` text,
+	`completed` integer NOT NULL,
+	`description` text,
+	FOREIGN KEY (`created_by`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`updated_by`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`parent_id`) REFERENCES `tasks`(`id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`assigned_to`) REFERENCES `users`(`id`) ON UPDATE no action ON DELETE no action
+);
+--> statement-breakpoint
 CREATE TABLE `users` (
 	`id` text PRIMARY KEY NOT NULL,
 	`name` text NOT NULL,
@@ -46,9 +64,4 @@ CREATE TABLE `verifications` (
 	`expires_at` integer NOT NULL,
 	`created_at` integer,
 	`updated_at` integer
-);
---> statement-breakpoint
-CREATE TABLE `tasks` (
-	`id` text PRIMARY KEY NOT NULL,
-	`title` text NOT NULL
 );
